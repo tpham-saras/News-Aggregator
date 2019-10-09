@@ -3,10 +3,10 @@
     
     
     function load_news_data(){
-        $servername = "localhost";
+        $servername = "35.244.104.181";
         $username = "root";
-        $password = "";
-        $dbname = "saras_care";
+        $password = "abc123";
+        $dbname = "db_datathon";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -20,11 +20,29 @@
         return $result;
     }
 
-    function insert_news_data($author, $title, $descriptions, $url, $urlToImage, $publishedAt, $content){
-        $servername = "localhost";
+    function load_limit_news_data($start_from, $limit){
+        $servername = "35.244.104.181";
         $username = "root";
-        $password = "";
-        $dbname = "saras_care";
+        $password = "abc123";
+        $dbname = "db_datathon";
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT author, title, descriptions, url, urlToImage, publishedAt, content FROM news_v2 LIMIT $start_from, $limit");
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+        }catch(PDOException $e){
+            console_log("Error: " . $e->getMessage());
+        }
+        $conn = null;
+        return $result;
+    }
+
+    function insert_news_data($author, $title, $descriptions, $url, $urlToImage, $publishedAt, $content){
+        $servername = "35.244.104.181";
+        $username = "root";
+        $password = "abc123";
+        $dbname = "db_datathon";
         try{
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

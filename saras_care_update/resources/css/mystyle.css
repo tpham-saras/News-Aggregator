@@ -47,3 +47,20 @@
 .DY5T1d{
     text-decoration: none;
 }
+
+.inline{ 
+    display: inline-block; 
+    float: right; 
+    margin: 20px 0px; 
+} 
+  
+input, button{ 
+    height: 34px; 
+} 
+
+.navigation{
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    /* background-color: aqua; */
+}

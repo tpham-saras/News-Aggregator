@@ -57,11 +57,11 @@
   }
 
 #popup {
-    height: 85%;
-    width: 60%;
+    height: 90%;
+    width: 90%;
     position: fixed;
-    bottom: 10%;
-    right: 20%;
+    bottom: 5%;
+    right: 5%;
     display: none;
     border: 2px solid;
     padding: 10px;

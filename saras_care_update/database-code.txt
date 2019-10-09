@@ -1,0 +1,10 @@
+CREATE TABLE `news_v2` (
+  author varchar(30) DEFAULT NULL,
+  title varchar(100) NOT NULL,
+  descriptions varchar(300) DEFAULT NULL,
+  url varchar(200) NOT NULL,
+  urlToImage varchar(100) NOT NULL,
+  publishedAt varchar(100) DEFAULT NULL,
+  content varchar(300) DEFAULT NULL,
+  primary key (url)
+);

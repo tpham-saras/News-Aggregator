@@ -26,7 +26,6 @@
             insert_news_data($article->author, $article->title, $article->description, $article->url, $article->urlToImage, $article->publishedAt, $article->content);
             
           }
-          
         ?>
         
         <div id='popup'>
