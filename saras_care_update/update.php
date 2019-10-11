@@ -28,23 +28,6 @@
           }
         ?>
         
-        <div id='popup'>
-          <button id='btClose' onclick='closePopup()'>X</button><br>
-            <iframe id='iframe' class='frame' name='iframe_a' src=''>
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-        </div>
-        <?php for($i = 0; $i < count($articles); $i++){ ?>
-          <div class='new-frame'>
-              <a href='<?php echo $articles[$i]->url ?>' target='iframe_a' onclick='openPopup()'>
-                <div class='new-featured-image'>
-                  <img src='<?php echo $articles[$i]->urlToImage ?>' alt=' '/>                    </div>
-                <div class='new-title'>
-                  <?php echo $articles[$i]->title ?>
-                </div>
-              </a>
-          </div>
-        <?php } ?>
       </div>
     </body>
 </html>
