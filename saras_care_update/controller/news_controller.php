@@ -3,10 +3,10 @@
     
     
     function load_news_data(){
-        $servername = "35.244.104.181";
+        $servername = "localhost";
         $username = "root";
-        $password = "abc123";
-        $dbname = "db_datathon";
+        $password = "";
+        $dbname = "saras_care";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,10 +21,10 @@
     }
 
     function load_limit_news_data($start_from, $limit){
-        $servername = "35.244.104.181";
+        $servername = "localhost";
         $username = "root";
-        $password = "abc123";
-        $dbname = "db_datathon";
+        $password = "";
+        $dbname = "saras_care";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,10 +39,10 @@
     }
 
     function insert_news_data($author, $title, $descriptions, $url, $urlToImage, $publishedAt, $content){
-        $servername = "35.244.104.181";
+        $servername = "localhost";
         $username = "root";
-        $password = "abc123";
-        $dbname = "db_datathon";
+        $password = "";
+        $dbname = "saras_care";
         try{
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

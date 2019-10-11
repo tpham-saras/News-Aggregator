@@ -10,13 +10,15 @@
     <body>
       <div class="news-frame">
         <?php
-                if(date('D') == 'Fri' || date('D') == 'Sun') { 
-                    include './update.php';
-                } else {
-                    require("controller/news_controller.php");
-                }
-            ?>
+            if(date('D') == 'Fri' || date('D') == 'Sun') { 
+                include './update.php';
+            } else {
+                require("controller/news_controller.php");
+            }
+        ?>
         <?php
+            
+
             $limit = 5;
             if(isset($_GET["page"])){
                 $pn = $_GET["page"];
