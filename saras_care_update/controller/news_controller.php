@@ -28,7 +28,7 @@
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT author, title, descriptions, url, urlToImage, publishedAt, content FROM news_v2 LIMIT $start_from, $limit");
+            $stmt = $conn->prepare("SELECT author, title, descriptions, url, urlToImage, publishedAt, content FROM news_v2 ORDER BY publishedAt LIMIT $start_from, $limit");
             $stmt->execute();
             $result = $stmt->fetchAll();
         }catch(PDOException $e){
